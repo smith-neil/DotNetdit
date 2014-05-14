@@ -43,9 +43,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ExceptionUtils.cs" />
+    <Compile Include="Utilities\StringUtilsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DotNetdit\DotNetdit.csproj">
+      <Project>{45eda1bf-fe9d-4ad2-89ed-d7e652689e74}</Project>
+      <Name>DotNetdit</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
