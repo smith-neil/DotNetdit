@@ -1,0 +1,38 @@
+- WTF is this thing?
+---- A wrapper that allows you to fluently interact with Reddit's api.
+- WTF does it do?
+---- Get subreddit info
+---- Get a list of posts
+---- Get next posts
+---- Get a list of comments on a post
+---- Get extra (unloaded) comments on a post
+---- Get user info
+---- Get messages
+---- Create a subreddit
+---- Create a post
+---- Create a comment
+---- Allow user to login
+---- Peform actions every x seconds
+- WTF?
+---- The fluentness allows you to do some pretty cool shit in 1 stupid line of code.
+- WTF does it look like?
+---- Reddit.Subreddit("all").Get().Take(25).After("id").ToPosts();                                                        - gets a list of posts
+---- Reddit.Subreddit("all").GetNext().ToPosts();                                                                         - gets the next post after the previous get. gets new if its first get
+---- Reddit.Subreddit("all").Get().ToSubreddit();                                                                         - gets subreddit info
+---- Reddit.Subreddit("newsubredditname").Create().ToSubreddit();														  - creates a new subreddit with curretly logged in user. (think it takes more than a name so look into that)
+---- Reddit.Subreddit("all").Post().WithTitle("title").WithLink("link").ToPost();                                         - creates a link post with previous logged in user
+---- Reddit.Subreddit("all").Post().WithTitle("title").WithText("text").ToPost();                                         - creates a selftext post with previous logged in user
+---- Reddit.Subreddit("all").Post().WithTitle("title").WithText("text").As("username").WithPassword("password").ToPost(); - creates a selfteaxt post without a previous logged in user
+---- Reddit.Post("id").Get().ToPost();  																				  - gets a post (includes comments)
+---- Reddit.Post("id").Get().ToComments();																				  - gets a post's comments
+---- Reddit.Post(Post post).GetExtra().ToComments();																	  - gets a post's extra comments. post object must already exist
+---- Reddit.Post("id").Comment().WithText("text").As("username").WithPassword("password").ToComment();					  - create's a comment on a post. can disclue the As & WithPassword if previoused logged in
+---- Reddit.User("username").Get().ToUserInfo();																		  - gets a user's (public) profile
+---- Reddit.Me().Get().ToUserInfo();																				      - gets the currently logged in user's (private) profile (might have to create specific gets for the different pages; saved, etc... & might want to rename ToUserInfo so it doesnt match the public user's method name) // oh you had to scroll over? man up you little bitch
+---- Reddit.Me().Get().Messages() todo todo todo todo todo todo todo todo todo todo todo todo todo todo todo todo todo    - gets the curretly logged in user's messages (have to learn how paging works for that)
+---- Reddit.Every(10).Minutes().And(30).Seconds().Do(m => m.FromSubreddit ...).Start().Stop();                            - performs any of the above actions on a timer. can start and stop
+---- Reddit.Login().As("username").WithPassword("password");															  - login to Reddit instance
+- WTF else?
+---- It helps bots
+-------- Reddit.FromSubreddit("learnprogramming", "c-sharp").SummonWhere("sometext").AppearsOn().Comment().Do(m => ...).Start().Stop();   - executes a function anytime a comment contains specificed text where m is the comment and based on default time. the time between gets can be specified but thats a todo
+---- And stuff
