@@ -24,7 +24,7 @@ namespace DotNetdit.UnitTests.Factories
         }
 
         [TestCase(@"{""name"": ""test""}")]
-        public void MakeJTokn_ValidJson_ThrowsException(string json) {
+        public void MakeJToken_ValidJson_ReturnsJToken(string json) {
             var target = MakeJTokenFactory();
 
             var result = target.MakeJToken(json);
