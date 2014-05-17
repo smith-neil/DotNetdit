@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factories\JTokenFactoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\ExceptioinUtilsTests.cs" />
     <Compile Include="Utilities\StringUtilsTests.cs" />
@@ -60,6 +59,9 @@
       <Project>{45eda1bf-fe9d-4ad2-89ed-d7e652689e74}</Project>
       <Name>DotNetdit</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Factories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
