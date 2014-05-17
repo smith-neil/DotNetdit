@@ -49,7 +49,20 @@
     <Compile Include="Domain\RedditObject.cs" />
     <Compile Include="Domain\Redditor.cs" />
     <Compile Include="Domain\Subreddit.cs" />
+    <Compile Include="IAuthService.cs" />
+    <Compile Include="IPostService.cs" />
+    <Compile Include="IRedditorService.cs" />
+    <Compile Include="ISubredditCreateBuilder.cs" />
+    <Compile Include="ISubredditGetBuilder.cs" />
+    <Compile Include="ISubredditPostBuilder.cs" />
+    <Compile Include="ISubredditService.cs" />
+    <Compile Include="ITimeBuilder.cs" />
+    <Compile Include="ITimerService.cs" />
+    <Compile Include="ITimeService.cs" />
+    <Compile Include="IUserBuilder.cs" />
+    <Compile Include="IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reddit.cs" />
     <Compile Include="Resources\Kinds.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

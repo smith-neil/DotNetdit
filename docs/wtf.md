@@ -27,7 +27,7 @@
 ---- Reddit.Post("id").Get().ToComments();																				  - gets a post's comments
 ---- Reddit.Post(Post post).GetExtra().ToComments();																	  - gets a post's extra comments. post object must already exist
 ---- Reddit.Post("id").Comment().WithText("text").As("username").WithPassword("password").ToComment();					  - create's a comment on a post. can disclue the As & WithPassword if previoused logged in
----- Reddit.User("username").Get().ToUserInfo();																		  - gets a user's (public) profile
+---- Reddit.User("username").GetOverview();																				  - gets a user's (public) profile
 ---- Reddit.Me().Get().ToUserInfo();																				      - gets the currently logged in user's (private) profile (might have to create specific gets for the different pages; saved, etc... & might want to rename ToUserInfo so it doesnt match the public user's method name) // oh you had to scroll over? man up you little bitch
 ---- Reddit.Me().Get().Messages() todo todo todo todo todo todo todo todo todo todo todo todo todo todo todo todo todo    - gets the curretly logged in user's messages (have to learn how paging works for that)
 ---- Reddit.Every(10).Minutes().And(30).Seconds().Do(m => m.FromSubreddit ...).Start().Stop();                            - performs any of the above actions on a timer. can start and stop
