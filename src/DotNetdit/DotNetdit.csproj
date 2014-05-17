@@ -44,7 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Comment.cs" />
+    <Compile Include="Domain\Post.cs" />
+    <Compile Include="Domain\RedditObject.cs" />
+    <Compile Include="Domain\Redditor.cs" />
+    <Compile Include="Domain\Subreddit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Kinds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kinds.resx</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\ExceptionUtils.cs" />
     <Compile Include="Utilities\StringUtils.cs" />
     <Compile Include="Web\IWebAgent.cs" />
@@ -55,6 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Factories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Kinds.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Kinds.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
